@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Embroidery by Mom</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hurricane&family=Pattaya&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hurricane&family=Pattaya&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="bg-[#eedece] text-gray-800">
+    <!-- HEADER -->
+     <header class="bg-gradient-to-r from-[#690303] to-[#9f0000] fixed top-0 left-0 right-0 z-50 shadow-lg">
+  <nav class="container mx-auto px-6 h-16 flex items-center justify-between relative">
+    <!-- LEFT: logo + name -->
+    <a href="#home" class="flex items-center gap-4">
+      <!-- pixel-perfect size for navbar -->
+      <img src="design/logo.png" alt="Logo"
+           class="logo nav-logo-img w-[175px] h-[175px] object-contain rounded-md shadow-sm" />
+      <span class="text-4xl font-bold text-[#eedece] hurricane-regular select-none">Trendy Embroidery</span>
+    </a>
+
+  
+
+    <!-- RIGHT: nav links -->
+    <div class="hidden md:flex items-center gap-6 text-sm text-[#eedece] font-semibold">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#OurWork" class="nav-link">Our Work</a>
+      <a href="#testimonials" class="nav-link">Feedback</a>
+      <a href="#conatct" class="ml-2 inline-block px-4 py-2 rounded-md border-2 border-[##eedece] text-[#eedece] hover:bg-[#c97e5a] hover:text-white transition">Contact</a>
+    </div>
+
+    <!-- mobile menu button -->
+    <button class="md:hidden p-2 rounded-md">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#6d3f28]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+</header>
+
+
+
+
+<!-- HERO -->
+<section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center px-10 py-20 gap-10">
+  <div class="flex-1">
+      <h1 class="text-5xl md:text-7xl font-bold leading-tight text-[#9f0000] pattaya-regular">
+        <br>
+          Machine<br> <span class="text-[#9f0000] pattaya-regular">Embroidery</span>
+      </h1>
+      <!-- <h2 class="typing-text text-2xl mt-4 font-bold"><span></span></h2> -->
+      <p class="mt-3 max-w-md text-3xl hurricane-regular text-[#9f0000]">
+        Custom embroidery, tassels, and logos — stitched lovingly by a Mom.
+      </p>
+      <!-- <a href="#instagram" class="inline-block mt-8 px-6 py-3 border-2 border-[#c97e5a] text-[#c97e5a] rounded-lg hover:bg-[#c97e5a] hover:text-white transition">
+          Explore Designs
+      </a> -->
+      <a href="#OurWork" class="nav-link inline-block mt-8 px-6 py-3 border-2 border-[#c97e5a] text-[#c97e5a] rounded-lg hover:bg-[#c97e5a] hover:text-white transition">Our Work</a>
+  </div>
+<!-- put this right after the header element (where you had it) -->
+<div class="left-images force-up" aria-hidden="true">
+  <img src="design/Title.png" alt="" class="left-image left-image-1">
+  <img src="design/Title.png" alt="" class="left-image left-image-2">
+</div>
+
+<div class="right-images" aria-hidden="true">
+  <img src="design/Title.png" alt="" class="right-image right-image-1">
+  <img src="design/Title.png" alt="" class="right-image right-image-2">
+</div>
+<div class="pattern-wrap" aria-hidden="true">
+  <img src="design/pattern.png" alt="" class="pattern" id="heroPattern" />
+</div>
+
+
+
+
+  <div class="flex-1 flex justify-center">
+      <img src="design/embroidery1.png" class="w-[350px] h-[350px] object-cover rounded-2xl shadow-xl hero-img" alt="Embroidery">
+  </div>
+</section>
+
+<!-- ABOUT -->
+
+  <section id="about" class="about-section px-10 py-20">
+
+  <div class="about-wrapper">
+
+    <!-- LEFT TEXT -->
+    <div class="about-left">
+      <h2 class="text-3xl font-bold text-[#62442b] mb-6 ">About Us</h2>
+
+      <p class="mb-4 shadows-into-light-two-regular text-2xl font-bold text-[#9f0000]">
+        At Trendy Embroidery, We specialize in creating beautiful machine embroidery pieces that add a touch of elegance to your sarees. Whether you're looking for custom designs, personalized logos, or unique tassels, our skilled team is here to bring your vision to life. Each piece is crafted with care and attention to detail, ensuring high-quality results that you'll love. Explore our collection and discover the perfect embroidery to enhance your style!
+      </p>
+
+      <p class="shadows-into-light-two-regular text-2xl font-bold text-[#9f0000]">
+        I am a passionate embroidery artist with over 10 years of experience in machine embroidery. My journey began as a hobby, and over the years, it has blossomed into a full-fledged business. I take pride in my work and strive to deliver exceptional quality and creativity in every piece I create. When I'm not stitching away, I enjoy spending time with my family and exploring new design inspirations.
+      </p>
+    </div>
+
+    <!-- RIGHT DECORATIVE CIRCLE + LOGO -->
+    <div class="about-right">
+      <div class="circle-wrapper">
+        <img class="circle-logo">
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- INSTAGRAM REELS -->
+<section id="OurWork" class="px-10 py-20 bg-[#f2e5ca]">
+  <h2 class="text-3xl font-bold text-[#62442b] mb-8 justify-center">Our Work</h2>
+
+  <div class="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory">
+      <video class="snap-center w-[260px] rounded-xl shadow-md" muted autoplay loop>
+          <source src="video/video 1.mp4">
+      </video>
+
+      <video class="snap-center w-[260px] rounded-xl shadow-md" muted autoplay loop>
+          <source src="video/video 2.mp4">
+      </video>
+      <video class="snap-center w-[260px] rounded-xl shadow-md" muted autoplay loop>
+          <source src="video/video 3.mp4">
+      </video>
+      <video class="snap-center w-[260px] rounded-xl shadow-md" muted autoplay loop>
+          <source src="video/video 4.mp4">
+      </video>
+       <video class="snap-center w-[260px] rounded-xl shadow-md" muted autoplay loop>
+          <source src="video/video 5.mp4">
+      </video>
+       <video class="snap-center w-[260px] rounded-xl shadow-md" muted autoplay loop>
+          <source src="video/video 6.mp4">
+      </video>
+       <video class="snap-center w-[260px] rounded-xl shadow-md" muted autoplay loop>
+          <source src="video/video 7.mp4">
+      </video>
+       <video class="snap-center w-[260px] rounded-xl shadow-md" muted autoplay loop>
+          <source src="video/video 8.mp4">
+      </video>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="px-10 py-20">
+  <h2 class="text-3xl font-bold text-[#62442b] mb-10">Customer Feedback</h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- Testimonial 1 -->
+    <div class="testimonial-card p-6 rounded-xl shadow-md bg-[#fff7f4]">
+      <div class="text-yellow-500 text-lg">★★★★★</div>
+      <p class="mt-3">
+        “The logo embroidery for our team T-shirts came out extremely clean. The thread density was perfect and colors matched our brand exactly.”
+      </p>
+      <div class="mt-4 flex justify-between text-sm text-gray-600">
+        <span>— Rahul K.</span>
+        <span>Feb 2025</span>
+      </div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="testimonial-card p-6 rounded-xl shadow-md bg-[#fff7f4]">
+      <div class="text-yellow-500 text-lg">★★★★★</div>
+      <p class="mt-3">
+        “Ordered machine embroidery for saree borders. The finishing was neat and the thread work looked premium. Delivered before the function date!”
+      </p>
+      <div class="mt-4 flex justify-between text-sm text-gray-600">
+        <span>— Meenakshi S.</span>
+        <span>Jan 2025</span>
+      </div>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="testimonial-card p-6 rounded-xl shadow-md bg-[#fff7f4]">
+      <div class="text-yellow-500 text-lg">★★★★☆</div>
+      <p class="mt-3">
+        “I got a custom monogram embroidered on towels. The stitching was crisp and durable. Took one extra day, but quality was totally worth it.”
+      </p>
+      <div class="mt-4 flex justify-between text-sm text-gray-600">
+        <span>— Aishwarya M.</span>
+        <span>Dec 2024</span>
+      </div>
+    </div>
+
+    <!-- Testimonial 4 -->
+    <div class="testimonial-card p-6 rounded-xl shadow-md bg-[#fff7f4]">
+      <div class="text-yellow-500 text-lg">★★★★★</div>
+      <p class="mt-3">
+        “Ordered 40 name tags for school uniforms. All pieces were uniform, clean, and tightly stitched. Great consistency in machine work!”
+      </p>
+      <div class="mt-4 flex justify-between text-sm text-gray-600">
+        <span>— Preethi L.</span>
+        <span>Nov 2024</span>
+      </div>
+    </div>
+
+    <!-- Testimonial 5 -->
+    <div class="testimonial-card p-6 rounded-xl shadow-md bg-[#fff7f4]">
+      <div class="text-yellow-500 text-lg">★★★★★</div>
+      <p class="mt-3">
+        “The embroidery on my bridal blouse turned out beautifully. Loved the neat finishing and the way the zari thread was handled.”
+      </p>
+      <div class="mt-4 flex justify-between text-sm text-gray-600">
+        <span>— Divya P.</span>
+        <span>Oct 2024</span>
+      </div>
+    </div>
+
+    <!-- Testimonial 6 -->
+    <div class="testimonial-card p-6 rounded-xl shadow-md bg-[#fff7f4]">
+      <div class="text-yellow-500 text-lg">★★★★★</div>
+      <p class="mt-3">
+        “Got a custom patch embroidered for my small business. Very detailed stitching and the colors came out vibrant!”
+      </p>
+      <div class="mt-4 flex justify-between text-sm text-gray-600">
+        <span>— Sanjay R.</span>
+        <span>Sep 2024</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+<footer class="text-center py-6 text-sm" data-aos="fade-up">
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="https://www.instagram.com/trendy._embroidery/" target="_blank" class="nav-link">Instagram</a>
+            <a href="https://wa.me/916382456264" target="_blank" class="nav-link">Chat on WhatsApp</a>
+            <p><strong>Phone:</strong> <a href="tel:+916382456264">+91 6382456264</a></p>
+        </div>
+
+        <p>Designed & Built by Daughter</p>
+    </footer>
+
+</html>

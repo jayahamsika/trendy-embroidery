@@ -1,0 +1,1 @@
+console.log('Embroidery site loaded with styling');

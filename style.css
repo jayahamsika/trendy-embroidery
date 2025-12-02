@@ -1,0 +1,381 @@
+/* Add at top of style.css */
+html, body {
+  overflow-x: hidden;
+  /* keep normal vertical scroll */
+  -webkit-overflow-scrolling: touch;
+  font-family: 'Inter', sans-serif;
+  
+}
+
+
+.hurricane-regular {
+  font-family: "Hurricane", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pattaya-regular {
+  font-family: "Pattaya", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.shadows-into-light-two-regular {
+  font-family: "Shadows Into Light Two", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Typing Effect */
+.typing-text span {
+  position: relative;
+}
+.typing-text span::before {
+  content: "Custom Hoop Art";
+  color: #c97e5a;
+  animation: words 6s infinite;
+}
+.typing-text span::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  background-color: #c97e5a;
+  right: -5px;
+  animation: cursor 0.5s infinite;
+}
+/* remove any accidental bg / border or outline around logo */
+.nav-logo-img,
+nav img.logo,
+.header-logo {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: block; /* removes weird inline gaps */
+  object-fit: contain;
+}
+
+/* ensure parent isn't forcing a background */
+nav .logo-wrap,
+.header-logo-wrap {
+  background: transparent !important;
+  padding: 0 !important;
+}
+:root{
+  /* change this if your header is taller/shorter */
+  --header-height: 64px;   /* nav height (px) */
+  --hang-offset: -40px;    /* how far above hero they start (negative = hang more from header) */
+}
+
+/* make sure your header is fixed and has the same height value */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  z-index: 50;
+  /* background image / styles you already use */
+}
+
+/* ensure main content doesn't hide under header */
+main { padding-top: calc(var(--header-height) + 16px); }
+.hero-title {
+  letter-spacing: 0;
+}
+
+
+
+/* make sure hero is the positioning parent */
+#home { position: relative; }
+
+/* container (anchor point at top-left of the hero) */
+.left-images {
+  position: absolute;        /* absolute inside hero */
+  top: 0;                    /* anchored to top of hero (just below header) */
+  left: 0px;              /* moves the stack left outside the hero */
+  width: 300px;              /* bounding box for lanterns */
+  height: 420px;             /* bounding box - used for absolute children */
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* base style for images */
+.left-image {
+  position: absolute;        /* now we position each image explicitly */
+  width: 500px;              /* reduced size so they don't overlap the hero text*/
+  height: auto;
+  transform-origin: top center;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.12));
+  transition: transform .3s ease;
+}
+
+/* left-most (lower) - placed lower inside the bounding box */
+.left-image-1 {
+  top: -30px;                /* lower value = higher on page, increase to move down */
+  left: -25px;
+  transform: rotate(-6deg);
+}
+
+/* second (higher) - placed higher than the first so they don't overlap */
+.left-image-2 {
+  top: 25px;                 /* smaller top => sits nearer the header (higher) */
+  left: -75px;
+  transform: rotate(-6deg);
+}
+
+/* gentle bobbing - optional */
+@keyframes bob { 0%{transform: translateY(0)} 50%{transform: translateY(-6px)} 100%{transform: translateY(0)} }
+.left-image-1 { animation: bob 6s ease-in-out infinite 0s; }
+.left-image-2 { animation: bob 6s ease-in-out infinite 0.6s; }
+
+/* hide decorations on small screens */
+@media (max-width: 768px) {
+  .left-images { display: none; }
+}
+
+
+/* container (anchor point at top-left of the hero) */
+.right-images {
+  position: absolute;        /* absolute inside hero */
+  top: 0;                    /* anchored to top of hero (just below header) */
+  left: 0px;              /* moves the stack left outside the hero */
+  width: 300px;              /* bounding box for lanterns */
+  height: 420px;             /* bounding box - used for absolute children */
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* base style for images */
+.right-image {
+  position: absolute;        /* now we position each image explicitly */
+  width: 500px;              /* reduced size so they don't overlap the hero text*/
+  height: auto;
+  transform-origin: top center;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.12));
+  transition: transform .3s ease;
+}
+
+/* left-most (lower) - placed lower inside the bounding box */
+.right-image-1 {
+  top: -30px;                /* lower value = higher on page, increase to move down */
+  right: -1250px;
+  transform: rotate(-6deg);
+}
+
+/* second (higher) - placed higher than the first so they don't overlap */
+.right-image-2 {
+  top: 25px;                 /* smaller top => sits nearer the header (higher) */
+  right: -1300px;
+  transform: rotate(-6deg);
+}
+
+/* gentle bobbing - optional */
+@keyframes bob { 0%{transform: translateY(0)} 50%{transform: translateY(-6px)} 100%{transform: translateY(0)} }
+.right-image-1 { animation: bob 6s ease-in-out infinite 0s; }
+.right-image-2 { animation: bob 6s ease-in-out infinite 0.6s; }
+
+/* hide decorations on small screens */
+@media (max-width: 768px) {
+  .right-images { display: none; }
+}
+
+/* parent positioning */
+#home {
+  position: relative;
+  overflow: hidden; /* keeps giant image from causing scroll */
+}
+
+/* the container stays centered in hero */
+.pattern-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 5; /* behind hero content */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* the pattern image (MAKE IT BIG HERE) */
+.pattern {
+  width: 2600px;             /* HUGE — increase to 1500px if you want */
+  max-width: none;           /* override any limits */
+  height: auto;
+  opacity: 0.10;             /* translucent background feel */
+  transform-origin: center;
+  animation: spin 40s linear infinite; /* slow classy rotation */
+  filter: blur(0px) saturate(0.9);
+}
+
+/* rotation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ensure your main content stays above */
+.hero-content, .hero-image, .hero-text {
+  position: relative;
+  z-index: 10;
+}
+
+
+
+
+
+
+@keyframes cursor {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes words {
+  0%, 25% { content: "Custom Hoop Art"; }
+  26%, 50% { content: "Name Frames"; }
+  51%, 75% { content: "Saree Tassels"; }
+  76%, 100% { content: "Handmade Gifts"; }
+}
+
+/* Testimonials */
+.testimonial-card {
+  background: #fff7f2;
+  border-left: 6px solid #c97e5a;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Hero image animation */
+.hero-img {
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+ 0% { transform: translateY(0px); }
+ 50% { transform: translateY(-12px); }
+ 100% { transform: translateY(0px); }
+}
+/* -------------------------
+   FOOTER STYLING
+-------------------------- */
+.footer {
+  background: #7A0000;         /* rich maroon to match your header */
+  color: #fff0e6;              /* soft cream text */
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-logo {
+  width: 60px;
+  height: auto;
+  opacity: 0.9;
+}
+
+.footer-contact a {
+  color: #ffd9d0; /* soft pinkish cream */
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 1px;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/* responsive */
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+.about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: -10px;
+  position: relative;
+}
+.about-right {
+  margin-top: -70px;
+  margin-left: 50px;
+}
+
+
+/* Left text area */
+.about-left {
+  flex: 1.2;
+  z-index: 2;
+  text-align: justify;
+}
+
+/* Right circle decorative area */
+.about-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* The scribble background: the big circular placeholder */
+.circle-wrapper {
+  position: relative;
+  width: 700px;        /* adjust size */
+  height: 700px;
+  background-image: url('design/logo1.png'); /* your circle X art */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Your BIG decorative embroidery logo */
+.circle-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 240px;      /* adjust size of logo inside circle */
+}
+
+/* Hide decorative circle on mobile */
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+  }
+  .circle-wrapper {
+    margin-top: 20px;
+    width: 260px;
+    height: 260px;
+  }
+  .circle-logo {
+    width: 160px;
+  }
+}
+.about .circle-logo {
+  width: 35vw;     /* 35% of screen width */
+}
